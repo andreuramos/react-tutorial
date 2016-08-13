@@ -1,27 +1,12 @@
 [
     {
         "id": 1388534400000,
-        "author": "Pete Hunt",
-        "text": "Hey there!"
+        "author": "Kroman the barbarian",
+        "text": "Das ist ein Kromment!"
     },
     {
         "id": 1420070400000,
-        "author": "Paul O\u2019Shannessy",
-        "text": "React is *great*!"
-    },
-    {
-        "id": 1471078705840,
         "author": "Andreu",
-        "text": "Hackathon!!"
-    },
-    {
-        "id": 1471078732036,
-        "author": "Andreu",
-        "text": "dfadsdfafda"
-    },
-    {
-        "id": 1471078759906,
-        "author": "andreu",
-        "text": "sadfsdfsdfsdf"
+        "text": "React is *ratamahatta*!"
     }
 ]
