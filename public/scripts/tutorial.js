@@ -1,8 +1,23 @@
+
+var Comment = React.createClass({
+	render: function(){
+		return(
+			<div className="Comment">
+				<h2 className="commentAuthor">
+					{this.props.author}
+				</h2>
+				{this.props.children}
+			</div>
+		);
+	}
+});
+
 var CommentList = React.createClass({
 	render: function(){
 		return (
 			<div className="commentList">
-				asdasd
+				<Comment author="Kroman el *bárbaro*">Kromment</Comment>
+				<Comment author="Andreu">Ratamahatta</Comment>
 			</div>
 		);
 	}
@@ -22,7 +37,7 @@ var CommentBox = React.createClass({
 	render: function(){
 		return (
 			<div className="CommentBox">
-				Civitfun Hackathon: React comment board.
+				<h1>Civitfun Hackathon: React comment board.</h1>
 				<CommentList />
 				<CommentForm /> 
 			</div>
@@ -30,18 +45,7 @@ var CommentBox = React.createClass({
 	}
 });
 
-var Comment = React.createClass({
-	render: function(){
-		return(
-			<div className="Comment">
-				<h2 className="commentAuthor">
-					{this.prop.author}
-				</h2>
-				{this.prop.children}
-			</div>
-		);
-	}
-});
+
 
 ReactDOM.render(
 	<CommentBox />,
