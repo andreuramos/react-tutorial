@@ -1,12 +1,18 @@
 
 var Comment = React.createClass({
+	rawMarkup: function(){
+		var md= new Remarkable();
+		var rawMarkup = md.render(this.props.children.toString());
+		return { __html: rawMarkup };
+	},
 	render: function(){
+		var md = new Remarkable();
 		return(
 			<div className="Comment">
 				<h2 className="commentAuthor">
 					{this.props.author}
 				</h2>
-				{this.props.children}
+				<span dangerouslySetInnerHTML={this.rawMarkup()} />
 			</div>
 		);
 	}
@@ -16,7 +22,7 @@ var CommentList = React.createClass({
 	render: function(){
 		return (
 			<div className="commentList">
-				<Comment author="Kroman el *bárbaro*">Kromment</Comment>
+				<Comment author="Kroman">Kromment *bárbaro*</Comment>
 				<Comment author="Andreu">Ratamahatta</Comment>
 			</div>
 		);
